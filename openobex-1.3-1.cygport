@@ -1,0 +1,16 @@
+DESCRIPTION="Object Exchange protocol implementation"
+HOMEPAGE="http://dev.zuckschwerdt.org/openobex/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+CYGCONF_ARGS="
+	--enable-apps
+	--enable-syslog
+	--enable-usb
+	--disable-bluetooth
+	--disable-debug
+	--disable-dump
+	--disable-irda
+	--disable-static
+	USB_CFLAGS=-I/usr/include
+	USB_LIBS=-lusb
+"
